@@ -1,0 +1,113 @@
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+    --border: 3px solid #A67BE2;
+}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background-color:var(--Light-grayish-blue) ;
+    max-width: 93rem;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.912rem;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "c-1 c-1 c-2 c-3"
+    "c-4 c-5 c-5 c-3" ;
+    max-width: 74rem;
+    min-height:35rem;
+    gap: 2rem 1.5rem;
+    margin: 0 1.5rem;
+}
+article{
+ box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);;
+}
+@media  (max-width: 375px) {
+    main{
+        grid-template-columns:100%;
+        grid-template-areas: "c-1 " "c-2 " "c-4 " "c-5 " "c-3 " ; 
+    } 
+}
+@media  (min-width:375px) and (max-width: 992px) {
+    main{
+        grid-template-columns:1fr 1fr;
+        grid-template-areas: "c-1 c-2"
+        "c-4 c-5"
+        "c-3 c-3"; 
+    } 
+}
+main article{
+    padding: 2rem;
+}
+main .personal-info{
+    display: flex;
+    font-size: 0.7rem;
+}
+main .personal-info .im-border{
+    border: var(--border);
+}
+main .personal-info img {
+    border-radius: 50%;
+    max-width:3rem ;
+    max-height:3rem ;
+}
+main .personal-info .personal-name{
+    padding-left: 1rem;
+}
+main .personal-info h2{
+color: var(--Light-grayish-blue);   
+}
+main .personal-info h3{
+ color: var(--Light-gray);   
+}
+main .par-1{
+    color: var(--Light-grayish-blue);
+    margin: 1rem 0;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+main .par-2{
+    color: var(--Light-gray);
+}
+main article{
+    border-radius: 0.55rem;
+}
+main .par-gir1{
+    color: var(--Very-dark-grayish-blue);
+}
+main .personal-name .gir-h2{
+    color: var(--Very-dark-grayish-blue);
+}
+.card-1{
+    grid-area: c-1;
+    background: var(--Moderate-violet) url("images/bg-pattern-quotation.svg") top  right 18% no-repeat ;
+    background-size: 7.9rem;
+}
+.card-2{
+    grid-area: c-2;
+    background-color: var(--Very-dark-grayish-blue);
+}
+.card-3{
+    grid-area: c-3;
+    background-color: var(--White);
+}
+.card-4{
+    grid-area: c-4;
+    background-color: var(--White); 
+}
+.card-5{
+    grid-area: c-5;
+   background-color: var(--Very-dark-blackish-blue);
+}
+
+.attribution { text-align: center; margin: 1.6rem; }
+.attribution a { color: var(--Moderate-violet);}
